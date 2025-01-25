@@ -1,0 +1,118 @@
+
+
+body {
+  color: white; /* Define a cor de texto padrão */
+}
+.navbar{
+  display: flex;
+  justify-content: space-between;
+}
+
+.grid-container{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr ;
+
+}
+footer{
+    background-color:#212529;
+
+  }
+
+  .subTittle{
+    font-size: x-large;
+  }
+
+.card{
+  background-color:#212529;
+  text-align: center;
+  font-size: medium;
+
+}
+
+.titleCard{
+  font-size:larger;
+}
+
+.cards{
+justify-items: center;
+
+
+}
+
+.navegation{
+  text-decoration: none;
+  text-decoration-line: none;
+}
+
+.about{
+  font-size: x-large;
+}
+
+.data{
+width:60%;
+}
+
+@media (min-width: 868px) {
+  .data {
+    width: 30%; 
+  }
+  .buttonEnviar{
+    margin-left: 18%;
+    height: 32px;
+  }
+}
+
+.cardHome {
+  display: block; 
+}
+
+
+
+
+.info{
+display: flex;
+flex-direction: column;
+padding-top: 2%;
+}
+
+.button{
+background-color: #ff7b00;
+width: 20%;
+
+}
+/* .infoIn{
+  display: flex;
+  flex-direction: column;
+  height: 10px;
+  margin-left: 8px;
+} */
+
+ #nome,#email{
+  margin-left: 20px;
+  height: 32px;
+ }
+
+ #email{
+  margin-left: 24px;
+ }
+
+
+ #telefone{
+margin-left: 6px;
+height: 32px;
+ }
+
+ #comentario{
+  height: 120px;
+ }
+
+ .buttonEnviar{
+ background-color:#9db4c0;
+height: 32px;
+
+}
+
+input::placeholder {
+  padding-left: 20px; /* Adiciona espaço à esquerda do texto do placeholder */
+}
+
