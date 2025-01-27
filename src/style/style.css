@@ -67,8 +67,6 @@ width:60%;
 }
 
 
-
-
 .info{
 display: flex;
 flex-direction: column;
@@ -80,12 +78,6 @@ background-color: #ff7b00;
 width: 20%;
 
 }
-/* .infoIn{
-  display: flex;
-  flex-direction: column;
-  height: 10px;
-  margin-left: 8px;
-} */
 
  #nome,#email{
   margin-left: 20px;
@@ -116,3 +108,10 @@ input::placeholder {
   padding-left: 20px; /* Adiciona espaço à esquerda do texto do placeholder */
 }
 
+li{
+    padding: 3px;
+}
+
+#carnesContent{
+  padding-top: 8px;
+}

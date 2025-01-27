@@ -1,19 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home</title>
-    <link href="./style.css" rel="stylesheet" />
+  <link href="./style/style.css" rel="stylesheet" />
     <link href="./input.css" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
   <script src="../src/menu.js"></script>
     <title>Mu Restaurante</title>
   </head>
-  <body class="bg-black">
-    <header class="w-full md:pt-2 flex bg-gray-800 justify-between items-center">
 
-      <div class="md:mr-4 mr-0 ml-2 text-white md:mt-2">
+
+
+  <header class="w-full md:pt-2 pt-1 flex bg-gray-800 justify-between items-center md:pb-2">
+
+      <div class="md:mr-4 mr-0 ml-2 text-white md:mt-1">
         <a  href="home.html"class="text-small">Mu Restaurante</a>
       </div>
   
@@ -23,21 +25,27 @@
           <input
             class="border-white outline-none rounded-2xl mt-1"
             type="text"
-            placeholder="Digite aqui"
+            placeholder="Pesquise aqui"
           />
           <a href="#">
             <img
               src="../icons/search.svg"
               alt="search"
-              class="size-6 ml-2 mr-4 mt-1 cursor-pointer"
+              class="size-6 ml-2 mr-4 mt-1 cursor-pointer hidden md:block"
             />
+          
           </a>
+          <a href="./cart.html">          
+            <img src="../icons/cart4.svg"  class=" mt-2 md:mt-1 md:mt-0 mx-4"/>
+          </a>
+
         </div>
           <div
           class="text-white block md:hidden mr-6 mt-2 cursor-pointer"
           onclick="menuOptions()"
         >
           <img src="../icons/list.svg" class="size-6" />
+
         </div>
   
 
@@ -64,18 +72,17 @@
         <ul
           class=" text-white  block md:hidden bg-gray-800   "
           id="menu"
-          style="display: none; position: fixed; md:hidden; right: 0; z-index: 999; margin-top: 8;top:4%; padding: 3px;"
+          style="display: none; position: absolute; right:5px; z-index: 999; margin-top:3;top:4%; margin-right: 18px; border-radius:8px"
         >
-          <li class="cursor-pointer mr-6 hover:text-orange-400">
+          <li class="cursor-pointer mr-6 hover:text-orange-400 itens_list">
             <a href="menu.html">Menu</a>
           </li>
-          <li class="cursor-pointer hover:text-orange-400 mr-6">
+          <li class="cursor-pointer hover:text-orange-400 mr-6 itens_list">
             <a href="#">Reservas</a>
           </li>
-          <li>
+          <li class="cursor-pointer hover:text-orange-400 mr-6 itens_list">
             <a
               href="login.html hover:text-orange-400"
-              class="cursor-pointer hover:text-orange-400 navegation mr-6"
             >
               Login
             </a>
@@ -83,7 +90,7 @@
         </ul>
       </nav>
     </header>
-  
+    <body class="bg-black">
 
     <div>
       <img src="../images/picanha.jpeg.jpg" class="w-screen" />
@@ -95,14 +102,15 @@
 </div>
 
 
-  <div class="bg-black md:flex items-center justify-center cards md:mx-auto pt-4">
+  <div class="bg-black md:flex items-center justify-center md:mx-auto pt-4">
   <img src="../images/prato 1.JPG" class="rounded-2xl hidden md:block "/>
- <div class="text-white text-4xl card md:w-1/2 px-4">
-  <p class="text-center mt-2 rounded-2xl titleCard">Tradicionais e Modernos</p>
-  <p class="md:px-2 ml-2 text-justify md:ml-3 mt-3 leading-relaxed">No Mu restaurante, a picanha é a estrela do cardápio. Selecionamos os melhores cortes e os preparamos com todo o cuidado e dedicação, para oferecer uma experiência gastronômica que realça o sabor e a maciez dessa carne tão especial. Cada prato é uma verdadeira celebração da picanha, combinando tradição, técnica e paixão por oferecer o melhor aos nossos clientes</p>
+ <div class="text-white text-3xl card md:w-1/2 px-4 bg-gray-500 md:py-16 md:rounded-2xl">
+  <p class="text-center mt-2 rounded-2xl">Tradicionais e Modernos</p>
+  <p class="md:px-2 ml-2 text-justify md:ml-3 mt-3 leading-relaxed text-base ">No Mu restaurante, a picanha é a estrela do cardápio. Selecionamos os melhores cortes e os preparamos com todo o cuidado e dedicação, para oferecer uma experiência gastronômica que realça o sabor e a maciez dessa carne tão especial. Cada prato é uma verdadeira celebração da picanha, combinando tradição, técnica e paixão por oferecer o melhor aos nossos clientes</p>
  </div>
  <img src="../images/prato 2.JPG" class="rounded-2xl hidden md:block" />
 </div>
+
 
 <div class=" text-white text-center pt-4  ">
  <p class="about mt-6"> Deixe seu comentário</p>
@@ -137,7 +145,7 @@
   <footer class="footer text-white flex md:grid md:grid-cols-1 md:grid-cols-2 md:gap-4">
     <div class="flex-col ml-6 hidden md:block ">
     <p class="subTittle text-center mt-3 ">Continue conectado</p>
-    <div class="">Desde 1997, somos apaixonados por carnes de qualidade. Cada prato é preparado com cortes selecionados, combinando tradição e sabores únicos para proporcionar uma experiência inesquecível aos amantes da boa gastronomia.</div>
+    <div class="mt-3">Desde 1997, somos apaixonados por carnes de qualidade. Cada prato é preparado com cortes selecionados, combinando tradição e sabores únicos para proporcionar uma experiência inesquecível aos amantes da boa gastronomia.</div>
     </div>
     <div class="flex-1 md:ml-8 sm:flex-col ml-2">
       <p class="subTittle text-center mt-3 ml-9">Siga-nos nas Redes Sociais</p>
@@ -153,12 +161,14 @@
     </div>
   </footer>
 
+
 <style>
 
-
-
-
-
+.itens_list{
+  border-bottom: 1px solid white;
+  padding-top: 15%;
+  margin-left: 3px;
+}
 
   .footer{
     background-color:#212529;
@@ -169,21 +179,10 @@
     font-size: x-large;
   }
 
-.card{
-  background-color:#212529;
-  text-align: center;
-  font-size: medium;
 
-}
 
 .titleCard{
   font-size:larger;
-}
-
-.cards{
-justify-items: center;
-
-
 }
 
 .navegation{
@@ -214,8 +213,6 @@ width:60%;
 }
 
 
-
-
 .info{
 display: flex;
 flex-direction: column;
@@ -227,12 +224,6 @@ background-color: #ff7b00;
 width: 20%;
 
 }
-/* .infoIn{
-  display: flex;
-  flex-direction: column;
-  height: 10px;
-  margin-left: 8px;
-} */
 
  #nome,#email{
   margin-left: 20px;

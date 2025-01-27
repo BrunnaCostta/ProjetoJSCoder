@@ -1,93 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home</title>
-    <link href="./style.css" rel="stylesheet" />
+  <title>Menu</title>
+    <link href="./style/style.css" rel="stylesheet" />
     <link href="./input.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="menu.js"></script>
     <title>Mu Restaurante</title>
   </head>
+
   <body class="bg-black">
-    <body class="bg-black">
-      <header class="w-full md:pt-2 flex bg-gray-800 justify-between items-center">
+
+    <header class="w-full md:pt-2 pt-1 flex bg-gray-800 justify-between items-center md:pb-2">
+
+      <div class="md:mr-4 mr-0 ml-2 text-white md:mt-1">
+        <a  href="home.html"class="text-small">Mu Restaurante</a>
+      </div>
   
-        <div class="md:mr-4 mr-0 ml-2 text-white md:mt-2">
-          <a  href="home.html"class="text-small">Mu Restaurante</a>
-        </div>
-    
-        <nav class="flex items-center">
-  
-          <div class="flex navbar">
-            <input
-              class="border-white outline-none rounded-2xl mt-1"
-              type="text"
-              placeholder="Digite aqui"
+      <nav class="flex items-center">
+
+        <div class="flex navbar">
+          <input
+            class="border-white outline-none rounded-2xl mt-1"
+            type="text"
+            placeholder="Pesquise aqui"
+          />
+          <a href="#">
+            <img
+              src="../icons/search.svg"
+              alt="search"
+              class="size-6 ml-2 mr-4 mt-1 cursor-pointer hidden md:block"
             />
-            <a href="#">
-              <img
-                src="../icons/search.svg"
-                alt="search"
-                class="size-6 ml-2 mr-4 mt-1 cursor-pointer hover:text-orange-400"
-              />
+          
+          </a>
+          <a href="./cart.html">          
+            <img src="../icons/cart4.svg"  class=" md:mt-2 mt-2 mx-4"/>
+          </a>
+        </div>
+          <div
+          class="text-white block md:hidden mr-6 mt-2 cursor-pointer"
+          onclick="menuOptions()"
+        >
+        <img src="../icons/list.svg" class="size-6" />
+        </div>
+  
+
+        <div
+          class="hidden md:flex md:mr-10 text-white justify-between"
+        >
+          <div class="cursor-pointer mr-4">
+            <a href="menu.html" class="hover:text-orange-400">Menu</a>
+          </div>
+          <div class="cursor-pointer mr-4" >
+            <a href="#" class="hover:text-orange-400">Reservas</a>
+          </div>
+          <div>
+            <a
+              href="login.html"
+              class="cursor-pointer mr-4 hover:text-orange-400 navegation"
+            >
+              Login
             </a>
           </div>
-            <div
-            class="text-white block md:hidden mr-6 mt-2 cursor-pointer"
-            onclick="menuOptions()"
-          >
-            <img src="../icons/list.svg" class="size-6" />
-          </div>
-    
+        </div>
   
-          <div
-            class="hidden md:flex md:mr-10 text-white hover:text-yellow-300 justify-between"
-          >
-            <div class="cursor-pointer mr-4">
-              <a href="menu.html">Menu</a>
-            </div>
-            <div class="cursor-pointer mr-4 hover:text-orange-400">
-              <a href="#">Reservas</a>
-            </div>
-            <div>
-              <a
-                href="login.html"
-                class="cursor-pointer mr-4 hover:text-orange-400 navegation"
-              >
-                Login
-              </a>
-            </div>
-          </div>
-    
-  
-          <ul
-            class=" text-white hover:text-yellow-300 block md:hidden bg-gray-800   "
-            id="menu"
-            style="display: none; position: fixed; md:hidden; right: 0; z-index: 999; margin-top: 8;top:4%; padding: 3px;"
-          >
-            <li class="cursor-pointer mr-6 hover:text-orange-400">
-              <a href="menu.html">Menu</a>
-            </li>
-            <li class="cursor-pointer hover:text-orange-400 mr-6">
-              <a href="#">Reservas</a>
-            </li>
-            <li>
-              <a
-                href="login.html hover:text-orange-400"
-                class="cursor-pointer hover:text-orange-400 navegation mr-6"
-              >
-                Login
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </header>
+
+        <ul
+          class=" text-white  block md:hidden bg-gray-800   "
+          id="menu"
+          style="display: none; position: absolute; right:5px; z-index: 999;  margin-top:3;top:4%; margin-right: 18px; border-radius:8px"
+        >
+          <li class="cursor-pointer mr-6 hover:text-orange-400 itens_list">
+            <a href="menu.html">Menu</a>
+          </li>
+          <li class="cursor-pointer hover:text-orange-400 mr-6 itens_list">
+            <a href="#">Reservas</a>
+          </li>
+          <li class="cursor-pointer hover:text-orange-400 mr-6 itens_list">
+            <a
+              href="login.html hover:text-orange-400"
+            >
+              Login
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
 
-<div class="text-white text-2xl text-center py-4">
+<div class="text-white text-2xl text-center md:py-4 py-8">
   Conheça nossos pratos
 </div>
 
@@ -101,39 +104,32 @@
 
 <!-- Carnes -->
 <div id="carnesContent">
-  <div class="flex-col justify-center mt-4 h-auto ml-4">
-  <img src="../images/MenuImages/02_responsive.jpg" class="rounded-3xl  mt-4 md:mt-8 md:ml-4 md:h-[200px] h-[150px]"/>
+   <div class="flex-col justify-center mt-4 h-auto ml-4">
+  <img src="../images/MenuImages/02_responsive.jpg" class="rounded-3xl  mt-4 md:mt-8 md:ml-4 md:h-[200px] h-[150px]"/> 
 
-  <div class="flex-col">
+  <<div class="flex-col">
   <img src="../images/MenuImages/03_responsive.PNG" class="rounded-3xl mt-4 md:mt-8 md:ml-4 md:h-[200px] h-[150px]"/>
   </div>
 
   <div class="flex-col">
   <img src="../images/MenuImages/04_responsive.PNG" class="rounded-3xl mt-4 md:mt-8 md:ml-4 md:h-[200px] sm:max-w-[160px] md:max-w-[220px] h-[150px]"/>
-  </div>
+  </div> 
+</div> 
 </div>
-
-<!-- Aves -->
-
-<!-- <div id="carnesContent">
-<p>Em construção</p> -->
-
-</div>
-
-<div>
-  <p class="text-xl text-center md:mb-8 mt-6 cursor-pointer"> ver mais</p>
-</div>
-</div>
+</div> 
 
 
 
 
-</body>
 
-<footer class="bg-gray-800 text-white flex md:grid md:grid-cols-1 md:grid-cols-2 md:gap-4 h-full -mr-2 mt-5">
+<div class="text-xl text-center md:mb-8 mt-6 cursor-pointer rounded-3xl">ver mais</div>
+
+
+
+<footer class="footer text-white flex md:grid md:grid-cols-1 md:grid-cols-2 md:gap-4 mt-24">
   <div class="flex-col ml-6 hidden md:block ">
   <p class="subTittle text-center mt-3 ">Continue conectado</p>
-  <div class="">Desde 1997, somos apaixonados por carnes de qualidade. Cada prato é preparado com cortes selecionados, combinando tradição e sabores únicos para proporcionar uma experiência inesquecível aos amantes da boa gastronomia.</div>
+  <div class="md:mt-3">Desde 1997, somos apaixonados por carnes de qualidade. Cada prato é preparado com cortes selecionados, combinando tradição e sabores únicos para proporcionar uma experiência inesquecível aos amantes da boa gastronomia.</div>
   </div>
   <div class="flex-1 md:ml-8 sm:flex-col ml-2">
     <p class="subTittle text-center mt-3 ml-9">Siga-nos nas Redes Sociais</p>
@@ -141,17 +137,14 @@
     <img src="../icons/instagram.svg" class="md:mb-2 "/>
     <p class="ml-2 ">muRestaurante</p>
     </span>
-    <span class="flex ml-32 mt-3">
-    <img src="../icons/whatsapp.svg" class="md:mt-14 mt-2 pb-4 "/>
+
+    <span class="flex ml-32  mt-3">
+    <img src="../icons/whatsapp.svg" class="md:mt-4 mt-2 pb-4 "/>
     <p class="ml-2 md:mt-3 mt-0 ">(21) 91234-5678</p>
   </span>
   </div>
 </footer>
- 
-
-
-
-
+</body>
 </html>
 
 
