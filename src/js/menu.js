@@ -10,30 +10,6 @@ function menuOptions() {
   }
 }
 
-
-// document.querySelectorAll("[data-tab]").forEach(tab => {
-//   tab.addEventListener("click",function(){
-//     const category = this.getAttribute("data-tab");
-//     console.log(category)
-//   })
-// });
-
-
-// var content = document.getElementById(verMais).innerHTML
-
-// function buttonSee(){
-
-
-// }
-
-
-// function seeMore(){
-//  content.addEventListener("click", buttonSee)
-
-
-// }
-
-
 async function fetchFoodData(category) {
   console.log(category,"categorias")
   const data = await fetch("meals.json");
@@ -78,8 +54,8 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+document.addEventListener("DOMContentLoaded", function () {
+  document.getElementById('carnesTab').classList.add('tab-active');
+  fetchFoodData('carnes');
+});
 
-function transfer(){
-containerHeader.innterHtml+=` ` 
-
-}

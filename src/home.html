@@ -7,89 +7,13 @@
   <link href="./style/style.css" rel="stylesheet" />
     <link href="./input.css" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
-  <script src="../src/menu.js"></script>
+    <script src="./js/menu.js"></script>
+  <script src="./js/transfer.js"></script>
     <title>Mu Restaurante</title>
   </head>
 
 
-
-  <header class="w-full md:pt-2 pt-1 flex bg-gray-800 justify-between items-center md:pb-2">
-
-      <div class="md:mr-4 mr-0 ml-2 text-white md:mt-1">
-        <a  href="home.html"class="text-small">Mu Restaurante</a>
-      </div>
-  
-      <nav class="flex items-center">
-
-        <div class="flex navbar">
-          <input
-            class="border-white outline-none rounded-2xl mt-1"
-            type="text"
-            placeholder="Pesquise aqui"
-          />
-          <a href="#">
-            <img
-              src="../icons/search.svg"
-              alt="search"
-              class="size-6 ml-2 mr-4 mt-1 cursor-pointer hidden md:block"
-            />
-          
-          </a>
-          <a href="./cart.html">          
-            <img src="../icons/cart4.svg"  class=" mt-2 md:mt-1 md:mt-0 mx-4"/>
-          </a>
-
-        </div>
-          <div
-          class="text-white block md:hidden mr-6 mt-2 cursor-pointer"
-          onclick="menuOptions()"
-        >
-          <img src="../icons/list.svg" class="size-6" />
-
-        </div>
-  
-
-        <div
-          class="hidden md:flex md:mr-10 text-white justify-between"
-        >
-          <div class="cursor-pointer mr-4">
-            <a href="menu.html" class="hover:text-orange-400">Menu</a>
-          </div>
-          <div class="cursor-pointer mr-4" >
-            <a href="#" class="hover:text-orange-400">Reservas</a>
-          </div>
-          <div>
-            <a
-              href="login.html"
-              class="cursor-pointer mr-4 hover:text-orange-400 navegation"
-            >
-              Login
-            </a>
-          </div>
-        </div>
-  
-
-        <ul
-          class=" text-white  block md:hidden bg-gray-800   "
-          id="menu"
-          style="display: none; position: absolute; right:5px; z-index: 999; margin-top:3;top:4%; margin-right: 18px; border-radius:8px"
-        >
-          <li class="cursor-pointer mr-6 hover:text-orange-400 itens_list">
-            <a href="menu.html">Menu</a>
-          </li>
-          <li class="cursor-pointer hover:text-orange-400 mr-6 itens_list">
-            <a href="#">Reservas</a>
-          </li>
-          <li class="cursor-pointer hover:text-orange-400 mr-6 itens_list">
-            <a
-              href="login.html hover:text-orange-400"
-            >
-              Login
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+    <div id="transferHeader"></div>
     <body class="bg-black">
 
     <div>
@@ -102,14 +26,18 @@
 </div>
 
 
-  <div class="bg-black md:flex items-center justify-center md:mx-auto pt-4">
-  <img src="../images/prato 1.JPG" class="rounded-2xl hidden md:block "/>
- <div class="text-white text-3xl card md:w-1/2 px-4 bg-gray-500 md:py-16 md:rounded-2xl">
-  <p class="text-center mt-2 rounded-2xl">Tradicionais e Modernos</p>
-  <p class="md:px-2 ml-2 text-justify md:ml-3 mt-3 leading-relaxed text-base ">No Mu restaurante, a picanha é a estrela do cardápio. Selecionamos os melhores cortes e os preparamos com todo o cuidado e dedicação, para oferecer uma experiência gastronômica que realça o sabor e a maciez dessa carne tão especial. Cada prato é uma verdadeira celebração da picanha, combinando tradição, técnica e paixão por oferecer o melhor aos nossos clientes</p>
- </div>
- <img src="../images/prato 2.JPG" class="rounded-2xl hidden md:block" />
+<div class="bg-black md:flex items-center justify-center md:mx-auto pt-4">
+  <img src="../images/prato 1.JPG" class="rounded-2xl hidden md:block" />
+  <div class="text-white text-3xl card md:w-1/2 px-4 bg-gray-500 md:py-16 md:rounded-2xl">
+    <p class="text-center mt-2 rounded-2xl">Tradicionais e Modernos</p>
+    <p class="md:px-2 ml-2 text-justify md:ml-3 mt-3 leading-relaxed text-base">
+      No Mu restaurante, a picanha é a estrela do cardápio. Selecionamos os melhores cortes e os preparamos com todo o cuidado e dedicação, para oferecer uma experiência gastronômica que realça o sabor e a maciez dessa carne tão especial. Cada prato é uma verdadeira celebração da picanha, combinando tradição, técnica e paixão por oferecer o melhor aos nossos clientes.
+    </p>
+  </div>
+  <img src="../images/prato 2.JPG" class="rounded-2xl hidden md:block" />
 </div>
+
+
 
 
 <div class=" text-white text-center pt-4  ">
@@ -132,37 +60,19 @@
         <input type="text" placeholder="Digite aqui sua mensagem" id="comentario"  class="data mb-3 ml-2 text-black">
       </p>
       <div>
-        <button class="text-white buttonEnviar px-6 ml-36 rounded-2xl hover:bg-gray-700 mt-3">Enviar</button>
-        <div class="flex-col text-center">
-        <p class="text-white titleCard ml-4 mt-8">Deseja fazer uma reserva?</p>
-        <button class="button rounded-3xl h-auto text-white mb-4 w-auto  mt-4">Clique aqui</button>
-      </div>
+        <button class="text-white buttonEnviar px-6 mb-2 ml-36 rounded-2xl hover:bg-gray-700 mt-3">Enviar</button>
+
       </div>
 </div>
+<div id="transferFooter"></div>
   </body>
 
 
-  <footer class="footer text-white flex md:grid md:grid-cols-1 md:grid-cols-2 md:gap-4">
-    <div class="flex-col ml-6 hidden md:block ">
-    <p class="subTittle text-center mt-3 ">Continue conectado</p>
-    <div class="mt-3">Desde 1997, somos apaixonados por carnes de qualidade. Cada prato é preparado com cortes selecionados, combinando tradição e sabores únicos para proporcionar uma experiência inesquecível aos amantes da boa gastronomia.</div>
-    </div>
-    <div class="flex-1 md:ml-8 sm:flex-col ml-2">
-      <p class="subTittle text-center mt-3 ml-9">Siga-nos nas Redes Sociais</p>
-      <span class="flex  ml-32 md:mt-2 mt-3">
-      <img src="../icons/instagram.svg" class="md:mb-2 "/>
-      <p class="ml-2 ">muRestaurante</p>
-      </span>
 
-      <span class="flex ml-32  mt-3">
-      <img src="../icons/whatsapp.svg" class="md:mt-4 mt-2 pb-4 "/>
-      <p class="ml-2 md:mt-3 mt-0 ">(21) 91234-5678</p>
-    </span>
-    </div>
-  </footer>
 
 
 <style>
+
 
 .itens_list{
   border-bottom: 1px solid white;
