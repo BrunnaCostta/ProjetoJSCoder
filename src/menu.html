@@ -7,12 +7,15 @@
     <link href="./style/style.css" rel="stylesheet" />
     <link href="./input.css" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="menu.js"></script>
+    <script src="./js/menu.js"></script>
+
     <title>Mu Restaurante</title>
   </head>
 
   <body class="bg-black">
-
+    
+    <div class="destinationHeader"></div>
+<!-- 
     <header class="w-full md:pt-2 pt-1 flex bg-gray-800 justify-between items-center md:pb-2">
 
       <div class="md:mr-4 mr-0 ml-2 text-white md:mt-1">
@@ -87,46 +90,27 @@
           </li>
         </ul>
       </nav>
-    </header>
-
+    </header> -->
 
 <div class="text-white text-2xl text-center md:py-4 py-8">
   Conheça nossos pratos
-</div>
 
-<div class="flex items-center  justify-center gap-2 ">
-<a href="#" class="text-white text-lg border-t-4 rounded-3xl px-3 bg-orange-400 ml-1 md:ml-6 cursor-pointer hover:bg-orange-300" id="menuItens">Carnes</a>
-<div class="text-white text-lg border-t-4 rounded-3xl px-3 bg-orange-400 md:ml-4 cursor-pointer hover:bg-orange-300" id="menuItens">Aves</div>
-<div class="text-white text-lg border-t-4 rounded-3xl px-3 bg-orange-400 md:ml-4 cursor-pointer hover:bg-orange-300" id="menuItens">Sobremesas</div>
-<div class="text-white text-lg border-t-4 rounded-3xl px-3 bg-orange-400 md:ml-4 cursor-pointer hover:bg-orange-300" id="menuItens">Bebidas</div>
-</div>
-
-
-<!-- Carnes -->
-<div id="carnesContent">
-   <div class="flex-col justify-center mt-4 h-auto ml-4">
-  <img src="../images/MenuImages/02_responsive.jpg" class="rounded-3xl  mt-4 md:mt-8 md:ml-4 md:h-[200px] h-[150px]"/> 
-
-  <<div class="flex-col">
-  <img src="../images/MenuImages/03_responsive.PNG" class="rounded-3xl mt-4 md:mt-8 md:ml-4 md:h-[200px] h-[150px]"/>
+  <div class="flex flex-col mt-6 w-full">
+    <div class="flex items-center justify-center gap-2">
+      <div class="text-white text-lg border-t-4 rounded-lg px-6 py-3 bg-green-600 md:ml-4 cursor-pointer hover:bg-green-500" onclick="fetchFoodData('carnes')">Carnes</div>
+      <div data-tab="aves" class="tab-active text-white text-lg border-t-4 rounded-lg px-6 py-3 bg-green-600 md:ml-4 cursor-pointer hover:bg-green-500" onclick="fetchFoodData('aves')">Aves</div>
+      <div class="text-white text-lg border-t-4 rounded-lg px-6 py-3 bg-green-600 md:ml-4 cursor-pointer hover:bg-green-500" onclick="fetchFoodData('sobremesas')">Sobremesas</div>
+      <div class="text-white text-lg border-t-4 rounded-lg px-6 py-3 bg-green-600 md:ml-4 cursor-pointer hover:bg-green-500" onclick="fetchFoodData('bebidas')">Bebidas</div>
+    </div>
+  </div>
+  
+  <div class="px-4 md:px-8 py-6 bg-black text-white rounded-lg flex-col">
+    <div class="flex-col justify-center mt-8 h-auto">
+        <div id="foodContainer"></div>
+    </div>
   </div>
 
-  <div class="flex-col">
-  <img src="../images/MenuImages/04_responsive.PNG" class="rounded-3xl mt-4 md:mt-8 md:ml-4 md:h-[200px] sm:max-w-[160px] md:max-w-[220px] h-[150px]"/>
-  </div> 
-</div> 
-</div>
-</div> 
-
-
-
-
-
-<div class="text-xl text-center md:mb-8 mt-6 cursor-pointer rounded-3xl">ver mais</div>
-
-
-
-<footer class="footer text-white flex md:grid md:grid-cols-1 md:grid-cols-2 md:gap-4 mt-24">
+ <!-- <footer class="footer text-white flex md:grid md:grid-cols-1 md:grid-cols-2 md:gap-4 mt-24  mt-full">
   <div class="flex-col ml-6 hidden md:block ">
   <p class="subTittle text-center mt-3 ">Continue conectado</p>
   <div class="md:mt-3">Desde 1997, somos apaixonados por carnes de qualidade. Cada prato é preparado com cortes selecionados, combinando tradição e sabores únicos para proporcionar uma experiência inesquecível aos amantes da boa gastronomia.</div>
@@ -143,9 +127,9 @@
     <p class="ml-2 md:mt-3 mt-0 ">(21) 91234-5678</p>
   </span>
   </div>
-</footer>
+</footer>  -->
+<footer id="containerHeader"></footer>
+
 </body>
 </html>
-
-
 

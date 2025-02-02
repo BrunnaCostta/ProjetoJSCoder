@@ -1,0 +1,171 @@
+[
+  {
+    "nome": "Picanha à Brasileira",
+    "descricao": "Fritas, arroz, molho à campanha.",
+    "valor": "39.90",
+    "categoria":"carnes",
+    "imagem": "../images/MenuImages/02_responsive.jpg"
+  },
+  {
+    "nome": "Picanha do Chef",
+    "descricao": "Deliciosa picanha com crosta de alho",
+    "valor": "89.90",
+    "categoria":"carnes",
+    "imagem": "../images/MenuImages/03_responsive.PNG"
+  },
+  {
+    "nome": "Picanha que é Picanha",
+    "descricao": "Picanha com delicioso molho gorgonzola.",
+    "valor": "99.90",
+    "categoria":"carnes",
+    "imagem": "../images/MenuImages/05_gorgonzola.PNG"
+  },
+  {
+    "nome": "Picanha com Molho Chimichurri",
+    "descricao": "Fatias de picanha servidas com molho chimichurri, batatas rústicas e salada fresca.",
+    "valor": "84.90",
+    "categoria":"carnes",
+    "imagem": "../images//MenuImages/06_picanhamolho.PNG"
+  },
+  {
+    "nome": "Escondidinho de Picanha",
+    "descricao": "Escondidinho de picanha desfiada com purê de mandioca e gratinado com queijo.",
+    "valor": "79.90",
+    "categoria":"carnes",
+    "imagem": "../images/MenuImages/04_escondidinho.PNG"
+  },
+  {
+    "nome": "Hambúrguer de Picanha",
+    "descricao": "Hambúrguer de picanha artesanal com queijo cheddar, bacon e molho no pão brioche.",
+    "valor": "39.90",
+    "categoria":"carnes",
+    "imagem": "../images/MenuImages/01 -hamburguer.PNG"
+  },
+
+  {
+    "nome": "Frango à Parmegiana",
+    "descricao": "Frango empanado com molho de tomate, queijo derretido e batatas fritas.",
+    "valor": "29.90",
+    "categoria": "aves",
+    "imagem": "../images/MenuImages/07 - parmegiana.PNG"
+  },
+  {
+    "nome": "Frango Grelhado com Ervas",
+    "descricao": "Peito de frango grelhado temperado com ervas finas, acompanhado de arroz e legumes.",
+    "valor": "29.90",
+    "categoria": "aves",
+    "imagem": "../images/MenuImages/07-ervas.PNG"
+  },
+  {
+    "nome": "Frango ao Curry",
+    "descricao": "Frango ao molho de curry e leite de coco com arroz .",
+    "valor": "49.90",
+    "categoria": "aves",
+    "imagem": "../images/MenuImages/07 - curry.PNG"
+  },
+  {
+    "nome": "Fricassê",
+    "descricao": "Delicioso Fricassê de frango com arroz.",
+    "valor": "59.90",
+    "categoria": "aves",
+    "imagem": "../images/MenuImages/07-fricasse.PNG"
+  },
+  {
+    "nome": "Frango à Kiev",
+    "descricao": "Filé de frango recheado com manteiga temperada, empanado e frito, acompanhado de purê de batatas.",
+    "valor": "69.90",
+    "categoria": "aves",
+    "imagem": "../images/MenuImages/07 - frangokiev.PNG"
+  },
+  {
+    "nome": "Coxinhas de Frango",
+    "descricao": "06 Coxinhas de frango crocantes recheadas com carne de frango desfiada, servidas com molho de pimenta.",
+    "valor": "39.90",
+    "categoria": "aves",
+    "imagem": "../images/MenuImages/07-coxinha.PNG"
+  }, {
+    "nome": "Pudim de Leite Condensado",
+    "descricao": "Delicioso pudim de leite condensado com calda de caramelo.",
+    "valor": "19.90",
+    "categoria": "sobremesas",
+    "imagem": "../images/MenuImages/08-pudim.PNG"
+  },
+  {
+    "nome": "Mousse de Chocolate",
+    "descricao": "Mousse cremosa de chocolate, servida com raspas de chocolate por cima.",
+    "valor": "22.90",
+    "categoria": "sobremesas",
+    "imagem": "../images/MenuImages/08-sobremesa.PNG"
+  },
+  {
+    "nome": "Torta de Limão",
+    "descricao": "Torta de limão com base crocante e creme suave de limão, decorada com chantilly.",
+    "valor": "24.90",
+    "categoria": "sobremesas",
+    "imagem": "../images/MenuImages/08-tortaLimao.PNG"
+  },
+  {
+    "nome": "Brigadeiro Gourmet",
+    "descricao":" Unidade de Brigadeiro gourmet feito com leite condensado, chocolate belga e granulado de chocolate.",
+    "valor": "9.90",
+    "categoria": "sobremesas",
+    "imagem": "../images/MenuImages/08-brigadeiro.PNG"
+  },
+  {
+    "nome": "Petit Gâteau",
+    "descricao": "Bolo quente de chocolate com recheio cremoso, servido com sorvete de creme.",
+    "valor": "29.90",
+    "categoria": "sobremesas",
+    "imagem": "../images/MenuImages/08-petit.PNG"
+  },
+  {
+    "nome": "Cheesecake de Frutas Vermelhas",
+    "descricao": "Cheesecake cremoso com cobertura de frutas vermelhas frescas.",
+    "valor": "32.90",
+    "categoria": "sobremesas",
+    "imagem": "../images/MenuImages/08-cake.PNG"
+  },
+ {
+    "nome": "Refrigerante Coca-Cola",
+    "descricao": "Refrigerante Coca-Cola geladinho para acompanhar seu prato.",
+    "valor": "9.90",
+    "categoria": "bebidas",
+    "imagem": "../images/MenuImages/09-coca.PNG"
+  },
+  {
+    "nome": "Limonada Natural",
+    "descricao": "Limonada fresca e refrescante, feita com limões naturais.",
+    "valor": "14.90",
+    "categoria": "bebidas",
+    "imagem": "../images/MenuImages/08-limonada.PNG"
+  },
+  {
+    "nome": "Cerveja Artesanal",
+    "descricao": "Cerveja artesanal de sabor encorpado, produzida localmente.",
+    "valor": "18.90",
+    "categoria": "bebidas",
+    "imagem": "../images/MenuImages/08-cerveja.PNG"
+  },
+  {
+    "nome": "Água Mineral",
+    "descricao": "Água mineral natural, perfeita para acompanhar sua refeição.",
+    "valor": "7.90",
+    "categoria": "bebidas",
+    "imagem": "../images/MenuImages/08-agua.PNG"
+  },
+  {
+    "nome": "Água com Gás",
+    "descricao": "Água com gás, ideal para quem prefere uma bebida mais leve.",
+    "valor": "9.90",
+    "categoria": "bebidas",
+    "imagem": "../images/MenuImages/08-aguacomgas.PNG"
+  },
+  {
+    "nome": "Vinho Tinto",
+    "descricao": "Vinho tinto de corpo médio, ideal para acompanhar carnes e massas.",
+    "valor": "39.90",
+    "categoria": "bebidas",
+    "imagem": "../images/MenuImages/08-vinho.PNG"
+  }
+  
+]
