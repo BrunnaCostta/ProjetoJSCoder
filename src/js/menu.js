@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 function removeFromLocalStorage(container) {
-  console.log(container); // Verifique se o container é o esperado
+  console.log(container); 
   const itemNameElement = container.querySelector('.itemDetails');
   
   if (!itemNameElement) {
@@ -88,7 +88,7 @@ function removeItem(element) {
       input.value = currentValue - 1;
     } else {
       input.value = 0;
-      removeFromLocalStorage(container);  // Chama a função para remover do localStorage
+      removeFromLocalStorage(container);
     }
   }
 }
@@ -192,6 +192,4 @@ styleEl.textContent = `
     -moz-appearance: textfield;
   }
 `;
-
-// Adiciona o elemento <style> ao <head> do documento
 document.head.appendChild(styleEl);
