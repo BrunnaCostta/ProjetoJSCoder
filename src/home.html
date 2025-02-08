@@ -46,26 +46,39 @@
 <div>
   
 </div>
-<div class="info px-4 rounded-xl mt-4">
-    <p class="text-white ml-6">Nome:
-  <input type="text" placeholder="Digite seu nome"  id="nome" class="data mb-3 text-black ">
-  </p>
-  <p class="text-white ml-6"> Email:
-    <input type="text" placeholder="Digite seu email"  id="email" class="data mb-3 text-black">
-    </p>
-    <p class="text-white ml-6">Telefone:
-      <input type="text" placeholder="(xx) xxxx-xxxx" id="telefone"  class="data mb-3 text-black">
-      </p>
-      <p class="text-white ">Mensagem:
-        <input type="text" placeholder="Digite aqui sua mensagem" id="comentario"  class="data mb-3 ml-2 text-black">
-      </p>
-      <div>
-        <button class="text-white buttonEnviar px-6 mb-2 ml-36 rounded-2xl hover:bg-gray-700 mt-3">Enviar</button>
-
-      </div>
+<div class="text-white text-center pt-4">
+  <p class="about mt-6">Deixe seu comentário</p>
 </div>
+<div>
+</div>
+<div class="info px-4 rounded-xl mt-4 searchTerm">
+  <p class="text-white ml-6">Nome:
+    <input type="text" placeholder="Digite seu nome" id="nome" class="data mb-3 text-black">
+  </p>
+  <p class="text-white ml-6">Email:
+    <input type="text" placeholder="Digite seu email" id="email" class="data mb-3 text-black">
+  </p>
+  <p class="text-white ml-6">Telefone:
+    <input type="text" placeholder="(xx) xxxx-xxxx" id="telefone" class="data mb-3 text-black">
+  </p>
+  <p class="text-white">Mensagem:
+    <input type="text" placeholder="Digite aqui sua mensagem" id="comentario" class="data mb-3 ml-2 text-black">
+  </p>
+  <div>
+    <button class="text-white buttonEnviar px-6 mb-2 ml-36 rounded-2xl hover:bg-gray-700 mt-3" onclick="saveToSessionStorage()">Enviar</button>
+  </div>
+</div>
+
+<div id="confirmationModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
+  <div class="bg-white rounded-lg p-6 w-1/2 text-center">
+    <p class=" text-xl text-green-400 ">Seu comentário foi enviado com sucesso. Obrigado!</p>
+    <button onclick="closeModal()" class="mt-4 px-6 py-2 bg-green-500 text-white rounded-lg">Fechar</button>
+  </div>
+</div>
+
 <div id="transferFooter"></div>
   </body>
+
 
 
 <style>
@@ -159,3 +172,34 @@ height: 32px;
 
 </style>
 
+<script>
+
+function saveToSessionStorage() {
+  const nome = document.getElementById('nome').value;
+  const email = document.getElementById('email').value;
+  const telefone = document.getElementById('telefone').value;
+  const comentario = document.getElementById('comentario').value;
+
+  if (nome && email && telefone && comentario) {
+    const userData = {
+      nome: nome,
+      email: email,
+      telefone: telefone,
+      comentario: comentario
+    };
+
+
+    sessionStorage.setItem('userData', JSON.stringify(userData));
+    document.getElementById('email').value = '';
+    document.getElementById('telefone').value = '';
+    document.getElementById('comentario').value = '';
+
+    document.getElementById('confirmationModal').classList.remove('hidden');
+  }
+}
+
+function closeModal() {
+  document.getElementById('confirmationModal').classList.add('hidden');
+}
+  
+</script>

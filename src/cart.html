@@ -3,39 +3,106 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Menu</title>
-    <link href="./style/style.css" rel="stylesheet" />
-    <link href="./input.css" rel="stylesheet" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="./js/menu.js"></script>
-    <script src="./js/transfer.js"></script>
+  <title>Carrinho de Compras</title>
+  <link href="./style/style.css" rel="stylesheet" />
+  <link href="./input.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="./js/menu.js"></script> <!-- Inclua seu arquivo JS com a lógica -->
+  <script src="./js/transfer.js"></script>
+</head>
+<body class="bg-black min-h-screen">
+  <div id="transferHeader"></div>
+  <div id="transferHeader" class="h-16 bg-gray-900 text-white flex justify-between items-center px-6">
+    <h1 class="text-2xl font-bold">Carrinho</h1>
+    <a href="./menu.html" class="text-white font-bold">Fechar</a>
+  </div>
 
+  <div id="cartContainer" class="px-4 md:px-8 py-6 bg-black text-white rounded-lg flex-col mt-8">
+    <h2 class="text-2xl font-semibold mb-4">Itens no Carrinho</h2>
 
-
-    <title>Mu Restaurante</title>
-  </head>
-
-  <body class="w-1/3">
-    
-
-
-    <!-- <div id="transferHeader"></div>
-
-    <div>
    
-     
-      </div> -->
+    <div id="foodContainer" class="flex flex-col space-y-4"></div>
+
+    
+    <p id="emptyMessage" class="text-white text-center hidden">Seu carrinho está vazio.</p>
 
 
+    <div class="mt-4 flex justify-between items-center text-xl font-semibold">
+      <span>Total</span>
+      <span id="totalValue">R$ 0,00</span>
+    </div>
 
 
+    <a href="https://pagbank.com.br/conta-digital/pagamento-pelo-celular/pagar-com-codigo-qr" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-8 mt-4 rounded-lg mx-auto md:w-[380px] block text-center">
+      Finalizar Compra
+    </a>
+  </div>
 
+  <script>
+  
+    function updateCartUI() {
+      const foodContainer = document.getElementById('foodContainer');
+      const emptyMessage = document.getElementById('emptyMessage');
+      const totalValueElement = document.getElementById('totalValue');
+      const savedItems = JSON.parse(localStorage.getItem('saveItem')) || [];
+
+      foodContainer.innerHTML = ''; 
+      let total = 0;
+
+      if (savedItems.length > 0) {
+        savedItems.forEach(item => {
+
+          const itemPrice = parseFloat(item.valor);
+
+          foodContainer.innerHTML += `
+            <div class="food-item flex flex-row mt-4 md:min-w-[33.33%] md:max-w-[40%]">
+              <div class="item produto bg-gray-800 shadow-lg rounded-xl overflow-hidden mb-6 transition-all duration-300 ease-in-out transform hover:scale-105 w-full flex"> 
+                <img src="${item.imagem}" class="w-[160px] h-[150px] object-cover rounded-l-xl">
+                <span class="flex flex-col justify-between md:justify-center w-full px-4 py-2">
+                  <p class="itemDetails text-lg font-semibold text-white text-center">${item.nome}</p>
+                  <p class="itemDetails text-xl font-semibold text-green-400 mt-2 mb-2 text-center">R$ ${itemPrice.toFixed(2)}</p>
+                  <button onclick="removeFromLocalStorage(this.closest('.item'))" class="bg-red-500 text-white py-1 px-4 rounded-lg mt-2 mx-auto block">
+                    Remover
+                  </button>
+                </span>
+              </div>
+            </div>
+          `;
+       
+          total += itemPrice;
+        });
+
+        emptyMessage.classList.add('hidden'); 
+      } else {
+        emptyMessage.classList.remove('hidden'); 
+      }
+
+
+      totalValueElement.textContent = `R$ ${total.toFixed(2)}`;
+    }
+
+
+    function removeFromLocalStorage(container) {
+      const itemNameElement = container.querySelector('.itemDetails');
+      const nome = itemNameElement.textContent.trim();
+
+      let saveItem = JSON.parse(localStorage.getItem("saveItem")) || [];
+      const newSaveItem = saveItem.filter(item => item.nome !== nome);
+
+      if (newSaveItem.length !== saveItem.length) {
+        localStorage.setItem("saveItem", JSON.stringify(newSaveItem));
+      
+        updateCartUI();
+      } else {
+        console.warn(`Item '${nome}' não encontrado no carrinho.`);
+      }
+    }
+
+ 
+    document.addEventListener('DOMContentLoaded', function () {
+      updateCartUI();
+    });
+  </script>
 
 </body>
 </html>
-<!-- <div class="px-4 md:px-8 py-6 bg-black text-white rounded-lg flex-col">
-  <div class="flex-col justify-center mt-8 h-auto">
-      <div id="foodContainer"></div>
-  </div>
-</div>
-<div id="transferFooter"></div> -->
